@@ -17,14 +17,14 @@ hist_year_button = st.button('Construir Histograma de Año')
 
 if hist_year_button:
     st.write('Procesando...') 
-    fig_year = px.histogram(car_data, x="year")
+    fig_year = px.histogram(car_data, x="model_year")
     st.plotly_chart(fig_year, use_container_width=True)
 
 scatter_price_year_button = st.button('Construir Gráfico de Dispersión de Precio vs Año')
 
 if scatter_price_year_button:
     st.write('Procesando...') 
-    fig_price_year = px.scatter(car_data, x="year", y="price")
+    fig_price_year = px.scatter(car_data, x="model_year", y="price")
     st.plotly_chart(fig_price_year, use_container_width=True)
 
 scatter_price_odometer_button = st.button('Construir Gráfico de Dispersión de Precio vs Odómetro')
